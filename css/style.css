@@ -1,0 +1,161 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Basic styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Main body font */
+    line-height: 1.6;
+    background: url('../image/Exploring-Upside-Down-Palau-04-1.jpg') no-repeat center center fixed; /* Background image */
+    background-size: cover; /* Cover the entire background */
+    color: #2c3e50; /* Dark text color */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full height for the body */
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(90deg, blue, #ffcc00); /* Gradient background */
+    color: #1a1a1a; /* Dark text */
+    padding: 5px 0; /* Reduced padding for closer spacing */
+    text-align: center;
+    border: 2px solid #2980b9; /* Border color */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+/* Logo styling */
+#logo {
+    max-width: 350px; /* Adjust based on your logo size */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0; /* Remove margin to bring it closer to the header */
+}
+
+/* Heading styles */
+h1 {
+    font-family: 'Times New Roman', Times, serif; /* Change font to Times New Roman */
+    font-size: 7rem; /* Set font size for h1 */
+    color: #2980b9; /* Trendy blue color */
+    margin: 5px 0 0; /* Set top margin to 5px for slight spacing */
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif; /* Change font to Times New Roman */
+    font-size: 4rem; /* Set font size for h2 */
+    color: #2980b9; /* Trendy blue color */
+    font-weight: bold; /* Bold text */
+}
+
+/* Navigation styles */
+nav ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove default padding */
+}
+
+nav li {
+    display: inline; /* Display buttons in a row */
+    margin: 0 15px; /* Spacing between buttons */
+}
+
+.button {
+    background-color: #27ae60; /* Button background */
+    color: white; /* Button text color */
+    padding: 12px 24px; /* Increased padding */
+    border: 2px solid #2980b9; /* Border color for buttons */
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+.button:hover {
+    background-color: #f39c12; /* Change button color on hover */
+    color: #1a1a1a; /* Change text color on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+/* Content Box Styles */
+.content-box {
+    background: linear-gradient(90deg, blue, #ffcc00);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto; /* Center align boxes */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #2980b9; /* Dark blue border */
+    color: #1a1a1a; /* Dark text for contrast */
+}
+
+/* Video Box Styles */
+.video-box {
+    background: linear-gradient(90deg, blue, #ffcc00);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto; /* Center align boxes */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #2980b9; /* Dark blue border */
+}
+
+/* Contact Box Styles */
+.contact-box {
+    background: url('../image/photo5.jpg') no-repeat center; /* Change to your contact image */
+    background-size: cover; /* Use 'cover' or 'contain' based on preference */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto; /* Center align boxes */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: gold; /* Change text color to gold for better contrast */
+    height: 400px; /* Set a specific height for better visibility */
+    font-weight: bold; /* Make text bold */
+    text-shadow: 1px 1px 0 DarkSlateGray, /* Outline effect */
+                 -1px -1px 0 DarkSlateGray,
+                 1px -1px 0 DarkSlateGray,
+                 -1px 1px 0 DarkSlateGray; 
+}
+
+/* New styles for content with image */
+.content-inner {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center vertically */
+}
+
+.content-inner p {
+    flex: 1; /* Allow the paragraph to take up available space */
+    margin-right: 20px; /* Add space between text and image */
+    font-size: 1.5rem; /* Increase font size for the paragraph */
+}
+
+.content-image {
+    max-width: 350px; /* Adjust the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid #2980b9; /* Optional: Add border to the image */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: DarkSlateGray; /* Dark background */
+    color: white; /* White text */
+    margin-top: auto; /* Push the footer to the bottom */
+    font-size: 1.2rem; /* Slightly larger footer text */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem; /* Smaller h1 on mobile */
+    }
+
+    h2 {
+        font-size: 2rem; /* Smaller h2 on mobile */
+    }
+
+    .content-inner p {
+        font-size: 1.2rem; /* Smaller paragraph text on mobile */
+    }
+
+    .button {
+        padding: 10px 20px; /* Smaller button padding on mobile */
+    }
+}

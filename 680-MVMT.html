@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the 680 Movement, a community-focused initiative.">
+    <meta name="keywords" content="680 Movement, community, gallery">
+    <link rel="stylesheet" href="css/style.css"> <!-- Link to your CSS file -->
+    <title>680 Movement</title>
+    <style>
+        /* Modal styles */
+        #modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+            text-align: center; /* Center the content */
+        }
+
+        #expandedImg {
+            max-width: 90%; /* Responsive */
+            max-height: 80vh; /* Responsive */
+            margin: auto; /* Center the image */
+            display: block; /* Block display */
+            padding-top: 5%; /* Optional spacing from top */
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .image-wrapper {
+            border-radius: 5px; /* Optional: rounded corners */
+            padding: 5px; /* Space between the border and the image */
+            background: linear-gradient(90deg, gold, darkblue); /* Gradient border */
+            display: inline-block; /* Fit the size of the image */
+        }
+
+        .gallery-image {
+            width: 200px; /* Set image width */
+            cursor: pointer; /* Change cursor to pointer for clickable images */
+            border-radius: 5px; /* Optional: rounded corners */
+            transition: transform 0.3s; /* Smooth transition on hover */
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="image/final logo.png" alt="Your Logo" id="logo"> <!-- Add your logo here -->
+        <h1>680 Movement</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="button">Home</a></li>
+                <li><a href="resume.html" class="button">Resume</a></li>
+                <li><a href="contact.html" class="button">Contact</a></li>
+                <li><a href="680-MVMT.html" class="button">680 Movement</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="photo-gallery">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <div class="image-wrapper" onclick="openModal('photo1')">
+                    <img src="image/photo.jpg" alt="Just Me" class="gallery-image">
+                </div>
+                <div class="image-wrapper" onclick="openModal('photo2')">
+                    <img src="image/photo2.jpg" alt="680" class="gallery-image">
+                </div>
+                <div class="image-wrapper" onclick="openModal('photo3')">
+                    <img src="image/photo3.jpg" alt="me" class="gallery-image">
+                </div>
+                <div class="image-wrapper" onclick="openModal('photo4')">
+                    <img src="image/photo4.jpg" alt="680" class="gallery-image">
+                </div>
+                <div class="image-wrapper" onclick="openModal('photo6')">
+                    <img src="image/photo6.JPEG" alt="Me and Bfolk" class="gallery-image">
+                </div>
+                <div class="image-wrapper" onclick="openModal('photo7')"> <!-- New Photo -->
+                    <img src="image/photo5.jpg" alt="New Photo" class="gallery-image"> <!-- Change src and alt -->
+                </div>
+            </div>
+        </section>
+
+        <section class="external-link">
+            <h3>Check Out This Website</h3>
+            <p>For more amazing content, visit <a href="https://www.sixeightymovement.com" target="_blank" rel="noopener noreferrer">680 Movement Website</a>.</p>
+        </section>
+    </main>
+
+    <!-- Modal for expanded images -->
+    <div id="modal" onclick="closeModal()">
+        <img id="expandedImg" src="" alt="Expanded image">
+    </div>
+
+    <footer>
+        <p>© 2024 Matthew Tadao</p>
+    </footer>
+
+    <script>
+        function openModal(imageId) {
+            const modal = document.getElementById('modal');
+            const expandedImg = document.getElementById('expandedImg');
+
+            // Set the source of the expanded image based on the clicked thumbnail
+            expandedImg.src = `image/${imageId}.jpg`;
+            
+            modal.style.display = "block"; // Show the modal
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = "none"; // Hide the modal
+        }
+    </script>
+</body>
+</html>
